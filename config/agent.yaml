@@ -1,0 +1,19 @@
+# Agent Manifest - AgentRegistry static entry point.
+# Root-level keys only; `class` is a single dotted import path.
+# Runtime-tunable parameters live in config/config.yaml, not here.
+
+id: CMN-C2-711
+name: Enterprise Scheduled Agent Automation Status Report Agent
+namespace: cmn
+version: 0.1.0
+enabled: true
+description: Enterprise Scheduled Agent Automation Status Report Agent
+class: src.graph.graph.CMNScheduledAutomationStatusReportAgent
+category: Cat 2
+industry: CMN
+base_type: DocGenerationAgent
+generation_mode: deterministic
+required_trust_level: INTERNAL
+requires:
+  secrets: []
+  extras: []
